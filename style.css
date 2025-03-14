@@ -1,33 +1,38 @@
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-body{
-    /* background: #081b29; */
+body {
     color: #ededed;
 }
 
-.header{
+.header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background: transparent;
+    background: rgba(0, 0, 0, 0.6); 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    z-index: 1000;
 }
 
-.logo{
-     font-size: 25px;
-     color: #ededed;
-     text-decoration: none;
-     font-weight: 600;
+/* Logo */
+.logo {
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar {
+    display: flex;
 }
 
 .navbar a {
@@ -40,116 +45,122 @@ body{
 }
 
 .navbar a:hover,
-.navbar a.active{
-    color:#00abf0 ;
+.navbar a.active {
+    color: #00abf0;
 }
 
-.home{
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #ededed;
+    background: transparent;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 5%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .navbar a {
+        display: block;
+        padding: 15px;
+        margin: 5px 0;
+    }
+
+    .navbar a:hover {
+        background: #00abf0;
+        color: #081b29;
+    }
+
+    .show-menu {
+        display: flex;
+    }
+}
+
+.home {
     color: #ededed;
     height: 100vh;
-    background: url('bg.jpeg') no-repeat ;
-    background-size: cover;
-    background-position: center;
+    background: url('bg.jpeg') no-repeat center center / cover;
     display: flex;
     align-items: center;
     padding: 0 10%;
 }
 
-.home-content{
+.home-content {
     max-width: 600px;
 }
 
-.home-content h1{
-    font-size:56px ;
+.home-content h1 {
+    font-size: 56px;
     font-weight: 700;
-    line-height:1.2 ;
+    line-height: 1.2;
 }
 
-.home-content h3{
+.home-content h3 {
     font-size: 32px;
     font-weight: 700;
-    color:#00abf0
+    color: #00abf0;
 }
 
-.home-content p{
+.home-content p {
     font-size: 16px;
     margin: 20px 0 40px;
 }
 
-.home-content .btn-box{
+.btn-box {
     display: flex;
     justify-content: space-between;
     width: 345px;
     height: 50px;
 }
 
-.btn-box a{
-    position: relative;
+.btn-box a {
     display: inline-flex;
     justify-content: center;
-   align-items: center; 
-    width:150px ;
+    align-items: center;
+    width: 150px;
     height: 100%;
     background: #00abf0;
-    border: 2px solid #00abf0;
     border-radius: 8px;
     font-size: 19px;
     color: #081b29;
     text-decoration: none;
     font-weight: 600;
-    letter-spacing: 1px;
-    z-index: 1;
-    overflow: hidden;
     transition: .5s;
 }
 
-.btn-box a:hover{
+.btn-box a:hover {
     background: transparent;
     color: #00abf0;
-    border-color: #00abf0;
+    border: 2px solid #00abf0;
 }
-
-.btn-box a:nth-child(2){
-    background: transparent;
-    color: #00abf0;
-}
-
-.btn-box a:nth-child(2):hover{
-    color: #081b29;
-}
-
-.btn-box a:nth-child(2)::before{
-    background: #00abf0;
-}
-
-.btn-box a::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: #081b29;
-    z-index: -1;
-    transition: .5s;
-    /* border-radius: 8px; */
-}
-
-.btn-box a:hover::before{
-    width: 100%;
-}
-
-.home-sci{
+.home-sci {
     position: absolute;
     bottom: 40px;
-    width: 100px;
     display: flex;
-    justify-content: space-between;
+    gap: 15px;
 }
 
-.home-sci a{
-    position: relative;
-    display: inline-flex;
+.home-sci a {
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 40px;
@@ -160,28 +171,10 @@ body{
     font-size: 20px;
     color: #00abf0;
     text-decoration: none;
-    z-index: 1;
-    overflow: hidden;
     transition: .5s;
 }
 
-.home-sci a:hover{
-    color: #081b29;
-    border-color: #081b29;
-}
-
-.home-sci a::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
+.home-sci a:hover {
     background: #00abf0;
-    z-index: -1;
-    transition: .5s;
-}
-
-.home-sci a:hover::before{
-    width: 100%;
+    color: #081b29;
 }

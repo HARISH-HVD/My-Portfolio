@@ -1,4 +1,4 @@
-
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -10,13 +10,14 @@ body {
     color: #ededed;
 }
 
+/* ✅ FIXED HEADER */
 .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background: rgba(0, 0, 0, 0.6); 
+    background: rgba(0, 0, 0, 0.6); /* Transparent but visible */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,6 +32,7 @@ body {
     font-weight: 600;
 }
 
+/* Navbar */
 .navbar {
     display: flex;
 }
@@ -49,6 +51,7 @@ body {
     color: #00abf0;
 }
 
+/* ✅ HAMBURGER MENU */
 .menu-toggle {
     display: none;
     font-size: 30px;
@@ -58,6 +61,7 @@ body {
     border: none;
 }
 
+/* RESPONSIVE NAVBAR */
 @media (max-width: 768px) {
     .header {
         padding: 15px 5%;
@@ -95,6 +99,7 @@ body {
     }
 }
 
+/* Home Section */
 .home {
     color: #ededed;
     height: 100vh;
@@ -152,6 +157,8 @@ body {
     color: #00abf0;
     border: 2px solid #00abf0;
 }
+
+/* Social Media Icons */
 .home-sci {
     position: absolute;
     bottom: 40px;
@@ -177,4 +184,19 @@ body {
 .home-sci a:hover {
     background: #00abf0;
     color: #081b29;
+}
+
+.para {
+  text-align: left;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #ffffff;
+  margin: 20px auto;
+  padding: 0 20px;
+  max-width: 800px;
+}
+@media (max-width: 600px) {
+  .para {
+    text-align: center;
+  }
 }

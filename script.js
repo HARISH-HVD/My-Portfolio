@@ -1,4 +1,4 @@
-const roles = ["Web Developer", "Frontend Engineer","Full-Stack Developer"];
+const roles = ["Web Developer","CyberSecurity","Frontend Engineer","Full-Stack Developer"];
 let index = 0;
 let charIndex = 0;
 let isDeleting = false;

@@ -9,7 +9,12 @@
 }
 
 body {
-    background: #081b29;
+     background-color: #08192a;
+    background-image: linear-gradient(rgba(8,27,41,0.6), rgba(8,27,41,0.6)), url('./backgrd.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
     color: #ededed;
     padding-top: 80px;
 }
@@ -89,12 +94,33 @@ form {
 
 input, textarea {
     width: 100%;
-    padding: 12px;
-    border: 2px solid #00abf0;
-    background: transparent;
+    padding: 14px 16px;
+    border: 1px solid rgba(0,171,240,0.22);
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
     color: #ededed;
     font-size: 16px;
-    border-radius: 5px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(3,10,15,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+    transition: border-color .18s ease, box-shadow .18s ease, transform .06s ease;
+    outline: none;
+    caret-color: #00abf0;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: rgba(237,237,237,0.52);
+}
+
+input:focus,
+textarea:focus {
+    border-color: #00abf0;
+    box-shadow: 0 12px 30px rgba(0,171,240,0.06), 0 4px 10px rgba(3,10,15,0.6);
+    transform: translateY(-1px);
+}
+
+textarea {
+    min-height: 140px;
+    resize: vertical;
 }
 
 button {
@@ -110,6 +136,8 @@ button {
 }
 
 button:hover {
-    background: #ededed;
-    color: #00abf0;
+    background: linear-gradient(180deg, #00abf0, #0099cc);
+    color: #081b29;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(0,171,240,0.12), 0 6px 18px rgba(3,10,15,0.4);
 }

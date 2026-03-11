@@ -9,7 +9,13 @@
 }
 
 body {
-    background: #081b29;
+    /* Fallback color + dark overlay for contrast */
+    background-color: #08192a;
+    background-image: linear-gradient(rgba(8,27,41,0.6), rgba(8,27,41,0.6)), url('./backgrd.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
     color: #ededed;
     padding-top: 80px; /* Prevents content from being hidden under the fixed navbar */
 }
